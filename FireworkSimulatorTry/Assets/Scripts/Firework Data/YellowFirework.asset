@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bdeb3bd96dcdf84da779b1a6929705a, type: 3}
-  m_Name: BlueFirework
+  m_Name: YellowFirework
   m_EditorClassIdentifier: 
-  fireworkVfx: {fileID: 7942885635554207129, guid: 0ec1f5c1a8af2c1438942fb776b5adac, type: 3}
+  fireworkVfx: {fileID: 7942885635554207129, guid: 862f4f61d7d77c04db3866fc07fad94d, type: 3}
   launchForceUpMax: 24
   launchForceUpMin: 20
   launchForceLeft: 1.6

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7942885635573728601}
   - component: {fileID: 8487234567147422271}
   m_Layer: 0
-  m_Name: FireworkVfx
+  m_Name: BlueFireworkVfx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,8 +117,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.7
-      minScalar: 0.8
+      scalar: 1.9
+      minScalar: 1.2
       maxCurve:
         serializedVersion: 2
         m_Curve:

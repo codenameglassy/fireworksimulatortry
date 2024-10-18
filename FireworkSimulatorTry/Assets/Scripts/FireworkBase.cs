@@ -101,6 +101,7 @@ public class FireworkBase : MonoBehaviour
       
         Debug.Log("Mouse entered the GameObject!");
         Instantiate(fireWorkData.fireworkVfx, transform.position, Quaternion.identity);
+        CameraShake.instance.TriggerShake();
         Destroy(gameObject);
         // You can also add visual effects, change color, etc. here
     }
