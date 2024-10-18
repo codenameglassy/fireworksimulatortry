@@ -15,6 +15,6 @@ MonoBehaviour:
   fireworkVfx: {fileID: 7942885635554207129, guid: 0ec1f5c1a8af2c1438942fb776b5adac, type: 3}
   launchForceUpMax: 24
   launchForceUpMin: 20
-  launchForceLeft: 2
-  launchForceRight: 2
+  launchForceLeft: 0.96
+  launchForceRight: 0.96
   tapTimer: 0

@@ -28,13 +28,17 @@ public class FireworkBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        launchForce = Random.Range(fireWorkData.launchForceUpMin, fireWorkData.launchForceUpMin);
-        // Randomize the FireWorkLaunchType at start
-        myFireworkLaunchType = (FireWorkLaunchType)Random.Range(0, System.Enum.GetValues(typeof(FireWorkLaunchType)).Length);
-        Debug.Log("Firework Launch Type: " + myFireworkLaunchType);
+        RandomizeLaunchType();
         Launch();
     }
 
+    void RandomizeLaunchType()
+    {
+        launchForce = Random.Range(fireWorkData.launchForceUpMin, fireWorkData.launchForceUpMax);
+        // Randomize the FireWorkLaunchType at start
+        myFireworkLaunchType = (FireWorkLaunchType)Random.Range(0, System.Enum.GetValues(typeof(FireWorkLaunchType)).Length);
+        Debug.Log("Firework Launch Type: " + myFireworkLaunchType);
+    }
     void Launch()
     {
         switch (myFireworkLaunchType)
