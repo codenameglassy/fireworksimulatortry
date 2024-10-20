@@ -5,8 +5,11 @@ using UnityEngine;
 public class FireworkBase : MonoBehaviour
 {
     [Header("Components")]
+    public bool isBomb;
     private Rigidbody2D rb;
     private FireWorkLaunchType myFireworkLaunchType;
+    public float ScoreToAdd;
+    public float shakeDuration, shakeMagnitude;
     public enum FireWorkLaunchType
     {
         up,
@@ -41,8 +44,10 @@ public class FireworkBase : MonoBehaviour
     }
     void Launch()
     {
+        AudioManagerCS.instance.PlayOneShot("fly");
         switch (myFireworkLaunchType)
         {
+          
             case FireWorkLaunchType.up:
 
                 // Apply an upward force to the Rigidbody2D
@@ -98,10 +103,15 @@ public class FireworkBase : MonoBehaviour
     void OnMouseEnter()
     {
         // Action when the mouse starts hovering over the GameObject
-      
+        if (isBomb)
+        {
+            Gamemanager.instance.TakeHealth();
+        }
         Debug.Log("Mouse entered the GameObject!");
         Instantiate(fireWorkData.fireworkVfx, transform.position, Quaternion.identity);
-        CameraShake.instance.TriggerShake();
+        CameraShake.instance.TriggerShake(shakeDuration, shakeMagnitude);
+        FindObjectOfType<RamailoGamesScoreManager>().AddScore(ScoreToAdd);
+        AudioManagerCS.instance.Play("blast");
         Destroy(gameObject);
         // You can also add visual effects, change color, etc. here
     }

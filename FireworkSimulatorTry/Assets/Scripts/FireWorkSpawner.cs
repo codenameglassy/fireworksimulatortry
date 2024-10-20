@@ -27,18 +27,40 @@ public class FireWorkSpawner : MonoBehaviour
 
     IEnumerator SpawnFireworkRoutine()
     {
+        if (IsGameover())
+        {
+            yield break;
+        }
         SpawnFirework(0);
         yield return new WaitForSeconds(spawnDelay);
+        if (IsGameover())
+        {
+            yield break;
+        }
         SpawnFirework(1);
         yield return new WaitForSeconds(spawnDelay);
+        if (IsGameover())
+        {
+            yield break;
+        }
         SpawnFirework(2);
         yield return new WaitForSeconds(spawnDelay);
-
+        if (IsGameover())
+        {
+            yield break;
+        }
 
         yield return new WaitForSeconds(waitDelay);
-
+        if (IsGameover())
+        {
+            yield break;
+        }
         StartCoroutine(SpawnFireworkRoutine());
     }
 
-   
+    private bool IsGameover()
+    {
+        return Gamemanager.instance.IsGameOver();
+    }
+    
 }

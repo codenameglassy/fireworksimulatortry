@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.ramailogames.scoreapi": {
+      "version": "file:D:/GitHub/ScoreApi Backups - Playandwin/scoreapi-main - ramailogames/scoreapi-main",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "7.0.4",
       "depth": 1,
@@ -152,6 +158,13 @@
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"

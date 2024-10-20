@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2235596671445949710}
   - component: {fileID: 2235596671445949697}
   - component: {fileID: 2235596671445949696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: YellowFireWork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ TrailRenderer:
   m_SortingLayerID: 313231721
   m_SortingLayer: 2
   m_SortingOrder: -1
-  m_Time: 0.2
+  m_Time: 0.43
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -245,4 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b476ca64de25ece41830e741b07f244f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBomb: 0
+  ScoreToAdd: 20
+  shakeDuration: 0.14
+  shakeMagnitude: 0.14
   fireWorkData: {fileID: 11400000, guid: d5872534dd8c1e0468b0b3a4e33b5e87, type: 2}

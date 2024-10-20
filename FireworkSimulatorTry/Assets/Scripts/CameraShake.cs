@@ -25,20 +25,20 @@ public class CameraShake : MonoBehaviour
         originalPosition = transform.localPosition;
     }
 
-    public void TriggerShake()
+    public void TriggerShake(float duration, float magnitude)
     {
         // Start the shake coroutine
-        StartCoroutine(Shake());
+        StartCoroutine(Shake(duration, magnitude));
     }
 
-    private IEnumerator Shake()
+    private IEnumerator Shake(float duration, float magnitude)
     {
         float elapsed = 0.0f;
 
-        while (elapsed < shakeDuration)
+        while (elapsed < duration)
         {
             // Random offset within the magnitude
-            Vector3 randomPoint = originalPosition + (Vector3)Random.insideUnitCircle * shakeMagnitude;
+            Vector3 randomPoint = originalPosition + (Vector3)Random.insideUnitCircle * magnitude;
 
             // Apply the random offset to the camera
             transform.localPosition = randomPoint;
